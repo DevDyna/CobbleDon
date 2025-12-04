@@ -1,3 +1,1 @@
-# TODO
-### I NEED TO REWORK THIS REPOSITORY UPDATING SOME API
-### BUT I'M LAZY!
+# CobbleDon - Cobblemon addon
