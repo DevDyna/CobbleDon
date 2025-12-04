@@ -18,9 +18,11 @@ public class DataBlockModelState extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-
-        directionalBlock(zBlocks.CLASSIC_POKEBALL.get(),
-                models().getExistingFile(x.rl("cobblemon", "item/poke_ball_model")));
+        zBlocks.zPokeBall.getEntries().forEach(p->
+        horizontalBlock(p.get(),
+                models().withExistingParent(p.getRegisteredName(),
+                        modLoc("block/base_lootpokeball"))
+                        .texture("ball", x.rl("cobblemon","item/poke_balls/models/"+p.getRegisteredName().replace(MODID+":", "")))));
 
     }
 
