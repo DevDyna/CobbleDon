@@ -1,4 +1,4 @@
-package com.devdyna.modname_id.compat;
+package com.devdyna.cobbledon.compat;
 
 import net.neoforged.fml.ModList;
 

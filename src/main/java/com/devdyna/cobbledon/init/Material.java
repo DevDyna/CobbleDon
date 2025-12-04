@@ -1,9 +1,9 @@
-package com.devdyna.modname_id.init;
+package com.devdyna.cobbledon.init;
 
 import java.util.function.Supplier;
 
-import com.devdyna.modname_id.Main;
-import com.devdyna.modname_id.init.types.*;
+import com.devdyna.cobbledon.Main;
+import com.devdyna.cobbledon.init.types.*;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -17,20 +17,14 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+@SuppressWarnings("null")
 public class Material {
         public static void register(IEventBus bus) {
-                zBlockEntities.register(bus);
                 zBlocks.register(bus);
                 zBlockTag.register(bus);
-                zContainer.register(bus);
                 zCreativeTab.register(bus);
-                zFluidTags.register(bus);
-                zFluidTypes.register(bus);
-                zFluids.register(bus);
-                zHandlers.register(bus);
                 zItems.register(bus);
                 zItemTag.register(bus);
-                zProperties.register(bus);
         }
 
         public static final BlockBehaviour.Properties bProp = BlockBehaviour.Properties.of();

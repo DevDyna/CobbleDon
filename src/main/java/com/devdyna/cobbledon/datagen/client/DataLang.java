@@ -1,11 +1,12 @@
-package com.devdyna.modname_id.datagen.client;
+package com.devdyna.cobbledon.datagen.client;
 
-import static com.devdyna.modname_id.Main.MODID;
+import static com.devdyna.cobbledon.Main.MODID;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+@SuppressWarnings({ "rawtypes", "null", "unused" })
 public class DataLang extends LanguageProvider {
 
     public DataLang(PackOutput o) {
@@ -18,9 +19,8 @@ public class DataLang extends LanguageProvider {
         // RegistryToLang("item",Items.IT, "hi");
     }
 
-    @SuppressWarnings("rawtypes")
-    private void RegistryToLang(String type, DeferredHolder d,String text){
-            add(type+"."+d.getRegisteredName().replace(":", "."),text);
+    private void RegistryToLang(String type, DeferredHolder d, String text) {
+        add(type + "." + d.getRegisteredName().replace(":", "."), text);
     }
 
 }

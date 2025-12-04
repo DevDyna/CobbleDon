@@ -1,6 +1,6 @@
-package com.devdyna.modname_id.init.types;
+package com.devdyna.cobbledon.init.types;
 
-import com.devdyna.modname_id.Main;
+import com.devdyna.cobbledon.Main;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+@SuppressWarnings("null")
 public class zCreativeTab {
         public static void register(IEventBus bus) {
                 zCreative.register(bus);

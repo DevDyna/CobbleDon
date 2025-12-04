@@ -1,4 +1,4 @@
-package com.devdyna.modname_id.init.types;
+package com.devdyna.cobbledon.init.types;
 
 import net.neoforged.bus.api.IEventBus;
 

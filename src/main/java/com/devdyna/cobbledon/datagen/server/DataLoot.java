@@ -1,10 +1,10 @@
-package com.devdyna.modname_id.datagen.server;
+package com.devdyna.cobbledon.datagen.server;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import com.devdyna.modname_id.init.types.zBlocks;
+import com.devdyna.cobbledon.init.types.zBlocks;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;

@@ -1,7 +1,7 @@
-package com.devdyna.modname_id.datagen.server;
+package com.devdyna.cobbledon.datagen.server;
 
 import java.util.concurrent.CompletableFuture;
-import com.devdyna.modname_id.Main;
+import com.devdyna.cobbledon.Main;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;

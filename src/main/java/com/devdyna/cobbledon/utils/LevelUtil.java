@@ -1,4 +1,4 @@
-package com.devdyna.modname_id.utils;
+package com.devdyna.cobbledon.utils;
 
 import java.util.List;
 
@@ -11,17 +11,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.storage.loot.LootParams.Builder;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
+@SuppressWarnings("null")
 public class LevelUtil {
     public static boolean isDimension(Level level, ResourceKey<Level> dim) {
         return level.dimension().equals(dim);
@@ -67,34 +65,6 @@ public class LevelUtil {
 
     public static void popItemFromPos(LevelAccessor level, double x, double y, double z, ItemStack itemStack) {
         popItemFromPos((Level) level, x, y, z, itemStack);
-    }
-
-    @SuppressWarnings("null")
-    public static List<ItemStack> getItemStackFromLootTable(LevelAccessor level, String raw_ore_name, float luck) {
-
-        Builder builder = new LootParams.Builder((ServerLevel) level);
-        LootParams params = builder.create(LootContextParamSets.EMPTY);
-        builder.withLuck(luck);
-
-        LootTable lootTable = level.getServer().reloadableRegistries()
-                .getLootTable(ResourceKey
-                        .create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(
-                                IDUtil.getModName(raw_ore_name), "blocks/"
-                                        + raw_ore_name.substring(raw_ore_name.lastIndexOf('.') + 1))));
-        return lootTable.getRandomItems(params);
-
-    }
-
-    public static List<ItemStack> getItemStackFromLootTable(LevelAccessor level, String raw_ore_name) {
-        return getItemStackFromLootTable(level, raw_ore_name, 1);
-    }
-
-    public static List<ItemStack> getItemStackFromLootTable(LevelAccessor level, String raw_ore_name, Player player) {
-        return getItemStackFromLootTable(level, raw_ore_name, player.getLuck());
-    }
-
-    public static List<ItemStack> getItemStackFromLootTable(LevelAccessor level, BlockState state) {
-        return getItemStackFromLootTable(level, state.getBlock().getDescriptionId(), 1);
     }
 
     // example

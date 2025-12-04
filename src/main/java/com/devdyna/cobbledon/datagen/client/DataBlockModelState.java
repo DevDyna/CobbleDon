@@ -1,6 +1,6 @@
-package com.devdyna.modname_id.datagen.client;
+package com.devdyna.cobbledon.datagen.client;
 
-import static com.devdyna.modname_id.Main.MODID;
+import static com.devdyna.cobbledon.Main.MODID;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;

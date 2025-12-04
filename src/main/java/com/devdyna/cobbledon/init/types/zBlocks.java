@@ -1,11 +1,16 @@
-package com.devdyna.modname_id.init.types;
+package com.devdyna.cobbledon.init.types;
 
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import com.devdyna.modname_id.Main;
-
+import com.devdyna.cobbledon.Main;
+import com.devdyna.cobbledon.init.Material;
+@SuppressWarnings("null")
 public class zBlocks {
+        
         public static void register(IEventBus bus) {
                 registerLists();
                 zBlock.register(bus);
@@ -21,6 +26,8 @@ public class zBlocks {
         // new BK());
 
         // ---------------------------------------------------------------------------------------//
+
+        public static final DeferredHolder<Block,?> pokeball = Material.registerItemBlock("poke", () -> new Block(Properties.of()));
 
         public static void registerLists() {
 

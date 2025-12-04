@@ -1,8 +1,4 @@
-package com.devdyna.modname_id.datagen.server;
-
-import static net.minecraft.data.recipes.RecipeCategory.MISC;
-import static net.minecraft.world.item.Items.*;
-import static com.devdyna.modname_id.Main.MODID;
+package com.devdyna.cobbledon.datagen.server;
 
 import java.util.concurrent.CompletableFuture;
 import net.minecraft.core.HolderLookup;
