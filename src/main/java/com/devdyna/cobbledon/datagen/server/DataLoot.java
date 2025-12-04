@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import com.cobblemon.mod.common.CobblemonItems;
 import com.devdyna.cobbledon.init.types.zBlocks;
 
 import net.minecraft.core.HolderLookup;
@@ -31,6 +32,7 @@ public class DataLoot extends BlockLootSubProvider {
         protected Iterable<Block> getKnownBlocks() {
                 List<Block> blocks = new ArrayList<>();
                 blocks.addAll(getList(zBlocks.zBlock));
+                blocks.addAll(getList(zBlocks.zPokeBall));
                 blocks.addAll(getList(zBlocks.zBlockItem));
                 return blocks;
         }
@@ -42,14 +44,17 @@ public class DataLoot extends BlockLootSubProvider {
 
         @Override
         protected void generate() {
-
-                add(zBlocks.CLASSIC_POKEBALL.get(), b -> LootTable.lootTable().withPool(
+                zBlocks.zPokeBall.getEntries().forEach(p -> add(p.get(), b -> LootTable.lootTable().withPool(
                                 LootPool.lootPool()
                                                 .setRolls(ConstantValue.exactly(1))
-                                                .add(LootItem.lootTableItem(Items.DIAMOND).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
-                                                .add(LootItem.lootTableItem(Items.EMERALD).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
-                                                .add(LootItem.lootTableItem(Items.GOLD_INGOT).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
-                ));
+                                                .add(LootItem.lootTableItem(CobblemonItems.ADAMANT_MINT)
+                                                                .apply(SetItemCountFunction.setCount(
+                                                                                UniformGenerator.between(1, 3))))
+                                                .add(LootItem.lootTableItem(Items.EMERALD)
+                                                                .apply(SetItemCountFunction.setCount(
+                                                                                UniformGenerator.between(1, 3))))
+                                                .add(LootItem.lootTableItem(Items.GOLD_INGOT).apply(SetItemCountFunction
+                                                                .setCount(UniformGenerator.between(1, 3)))))));
 
         }
 
