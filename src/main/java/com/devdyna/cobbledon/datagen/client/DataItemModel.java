@@ -18,9 +18,10 @@ public class DataItemModel extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
-        withExistingParent(zBlocks.CLASSIC_POKEBALL.getRegisteredName(), x.rl("cobblemon", "item/poke_ball_model"));
-
+        zBlocks.zPokeBall.getEntries().forEach(p->
+        withExistingParent(p.getRegisteredName(),
+                modLoc("block/base_lootpokeball"))
+                .texture("ball", x.rl("cobblemon", "item/poke_balls/models/"+p.getRegisteredName().replace(MODID+":", ""))));
     }
 
 }
