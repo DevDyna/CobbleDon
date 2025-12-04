@@ -1,0 +1,188 @@
+{
+  "format_version": "1.21.6",
+  "parent": "block/block",
+  "credit": "Made with Blockbench",
+  "render_type": "cutout",
+  "texture_size": [64, 32],
+  "textures": {
+    "particle": "#ball"
+  },
+  "elements": [
+    {
+      "from": [4, 4.25, 4],
+      "to": [12, 8.25, 12],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [8, 4.25, 12]
+      },
+      "faces": {
+        "north": {
+          "uv": [2, 4, 4, 6],
+          "texture": "#ball"
+        },
+        "east": {
+          "uv": [0, 4, 2, 6],
+          "texture": "#ball"
+        },
+        "south": {
+          "uv": [6, 4, 8, 6],
+          "texture": "#ball"
+        },
+        "west": {
+          "uv": [4, 4, 6, 6],
+          "texture": "#ball"
+        },
+        "up": {
+          "uv": [4, 4, 2, 0],
+          "texture": "#ball"
+        },
+        "down": {
+          "uv": [6, 0, 4, 4],
+          "texture": "#ball"
+        }
+      }
+    },
+    {
+      "from": [7, 3.25, 3.75],
+      "to": [9, 5.25, 3.75],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [8, 4.25, 12]
+      },
+      "faces": {
+        "north": {
+          "uv": [0, 0, 0.5, 1],
+          "texture": "#ball"
+        },
+        "east": {
+          "uv": [0, 0, 0, 1],
+          "texture": "#ball"
+        },
+        "south": {
+          "uv": [0.5, 0, 1, 1],
+          "texture": "#ball"
+        },
+        "west": {
+          "uv": [0.5, 0, 0.5, 1],
+          "texture": "#ball"
+        },
+        "up": {
+          "uv": [0.5, 0, 0, 0],
+          "texture": "#ball"
+        },
+        "down": {
+          "uv": [1, 0, 0.5, 0],
+          "texture": "#ball"
+        }
+      }
+    },
+    {
+      "from": [3.75, 4, 3.75],
+      "to": [12.25, 8.5, 12.25],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [8, 4.25, 8]
+      },
+      "faces": {
+        "north": {
+          "uv": [2, 14, 4, 16],
+          "texture": "#ball"
+        },
+        "east": {
+          "uv": [0, 14, 2, 16],
+          "texture": "#ball"
+        },
+        "south": {
+          "uv": [6, 14, 8, 16],
+          "texture": "#ball"
+        },
+        "west": {
+          "uv": [4, 14, 6, 16],
+          "texture": "#ball"
+        },
+        "up": {
+          "uv": [4, 14, 2, 10],
+          "texture": "#ball"
+        },
+        "down": {
+          "uv": [6, 10, 4, 14],
+          "texture": "#ball"
+        }
+      }
+    },
+    {
+      "from": [3.75, 0, 3.75],
+      "to": [12.25, 4.5, 12.25],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [8, 4.25, 8]
+      },
+      "faces": {
+        "north": {
+          "uv": [10, 14, 12, 16],
+          "texture": "#ball"
+        },
+        "east": {
+          "uv": [8, 14, 10, 16],
+          "texture": "#ball"
+        },
+        "south": {
+          "uv": [14, 14, 16, 16],
+          "texture": "#ball"
+        },
+        "west": {
+          "uv": [12, 14, 14, 16],
+          "texture": "#ball"
+        },
+        "up": {
+          "uv": [12, 14, 10, 10],
+          "texture": "#ball"
+        },
+        "down": {
+          "uv": [14, 10, 12, 14],
+          "texture": "#ball"
+        }
+      }
+    },
+    {
+      "from": [4, 0.25, 4],
+      "to": [12, 4.25, 12],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [8, 4.25, 8]
+      },
+      "faces": {
+        "north": {
+          "uv": [10, 4, 12, 6],
+          "texture": "#ball"
+        },
+        "east": {
+          "uv": [8, 4, 10, 6],
+          "texture": "#ball"
+        },
+        "south": {
+          "uv": [14, 4, 16, 6],
+          "texture": "#ball"
+        },
+        "west": {
+          "uv": [12, 4, 14, 6],
+          "texture": "#ball"
+        },
+        "up": {
+          "uv": [12, 4, 10, 0],
+          "texture": "#ball"
+        },
+        "down": {
+          "uv": [14, 0, 12, 4],
+          "texture": "#ball"
+        }
+      }
+    }
+  ],
+  "display": { "gui": { "rotation": [30, -135, 0], "translation": [0, 4, 0] } }
+}
