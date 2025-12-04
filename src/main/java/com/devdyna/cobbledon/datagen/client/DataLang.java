@@ -18,6 +18,8 @@ public class DataLang extends LanguageProvider {
     @Override
     protected void addTranslations() {
         zBlocks.zPokeBall.getEntries().forEach(i -> addBlock(i, named(i)));
+
+        add(MODID+".tab", "CobbleDon : Cobblemon Addon");
     }
 
     private String named(DeferredHolder<?, ?> b) {
