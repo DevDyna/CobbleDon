@@ -27,7 +27,7 @@ public class zCreativeTab {
                         .register(Main.MODID, () -> CreativeModeTab.builder()
                                         .title(Component.translatable(Main.MODID + ".tab"))
                                         .withTabsBefore(CreativeModeTabs.COMBAT)
-                                        // .icon(() -> Items.IT.get().getDefaultInstance())
+                                        .icon(() -> zBlocks.POKE_BALL.get().asItem().getDefaultInstance())
                                         .displayItems((parameters, output) -> {
 
                                                 zItems.zItem.getEntries().forEach(e -> {
