@@ -5,12 +5,14 @@ import javax.annotation.Nullable;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -34,7 +36,8 @@ public class PokeLootBall extends DirectionalBlock {
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite());
+        return defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING,
+                context.getHorizontalDirection().getOpposite());
     }
 
     @Override
@@ -66,6 +69,11 @@ public class PokeLootBall extends DirectionalBlock {
             return InteractionResult.SUCCESS;
         } else
             return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    @Override
+    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        return Block.canSupportCenter(level, pos.below(), Direction.UP);
     }
 
 }
