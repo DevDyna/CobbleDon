@@ -120,6 +120,10 @@ configurations {
 
 dependencies {
 
+implementation "curse.maven:cobblemon-687131:7273151"
+implementation "curse.maven:kotlin-351264:6994056"
+
+
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
