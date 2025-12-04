@@ -6,9 +6,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.List;
-
-import com.cobblemon.mod.common.CobblemonItems;
 import com.devdyna.cobbledon.Main;
 import com.devdyna.cobbledon.init.Material;
 import com.devdyna.cobbledon.init.builder.PokeLootBall;
