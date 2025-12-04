@@ -1,0 +1,6 @@
+{
+  "parent": "cobbledon:block/base_lootpokeball",
+  "textures": {
+    "ball": "cobblemon:item/poke_balls/models/great_ball"
+  }
+}

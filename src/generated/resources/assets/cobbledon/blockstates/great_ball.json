@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cobbledon:block/great_ball",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cobbledon:block/great_ball"
+    },
+    "facing=south": {
+      "model": "cobbledon:block/great_ball",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cobbledon:block/great_ball",
+      "y": 270
+    }
+  }
+}
