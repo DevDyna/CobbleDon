@@ -2,11 +2,13 @@ package com.devdyna.cobbledon.datagen.client;
 
 import static com.devdyna.cobbledon.Main.MODID;
 
+import com.devdyna.cobbledon.init.types.zBlocks;
+
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-@SuppressWarnings({ "rawtypes", "null", "unused" })
+@SuppressWarnings({ "null" })
 public class DataLang extends LanguageProvider {
 
     public DataLang(PackOutput o) {
@@ -15,12 +17,19 @@ public class DataLang extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        // RegistryToLang("block",Blocks.BK, "hi");
-        // RegistryToLang("item",Items.IT, "hi");
+        zBlocks.zPokeBall.getEntries().forEach(i -> addBlock(i, named(i)));
     }
 
-    private void RegistryToLang(String type, DeferredHolder d, String text) {
-        add(type + "." + d.getRegisteredName().replace(":", "."), text);
-    }
+    private String named(DeferredHolder<?, ?> b) {
 
+        StringBuilder result = new StringBuilder();
+        for (String word : b.getRegisteredName().replace(MODID + ":", "").replaceAll("_", " ").split(" ")) {
+            if (!word.isEmpty()) {
+                result.append(Character.toUpperCase(word.charAt(0)))
+                        .append(word.substring(1))
+                        .append(" ");
+            }
+        }
+        return result.toString().trim();
+    }
 }
