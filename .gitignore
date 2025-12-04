@@ -26,3 +26,5 @@ run-data
 repo
 /.vscode
 /generated
+/src/main/resources/assets/cobblemon
+/src/generated/resources/.cache
