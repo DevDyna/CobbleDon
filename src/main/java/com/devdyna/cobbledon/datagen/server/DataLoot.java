@@ -9,10 +9,18 @@ import com.devdyna.cobbledon.init.types.zBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+@SuppressWarnings("null")
 public class DataLoot extends BlockLootSubProvider {
 
         public DataLoot(HolderLookup.Provider l) {
@@ -34,9 +42,14 @@ public class DataLoot extends BlockLootSubProvider {
 
         @Override
         protected void generate() {
-                // dropSelf(Blocks.BK.get());
 
-                // Blocks.zBlock.getEntries().forEach(b -> dropSelf(b.get()));
+                add(zBlocks.CLASSIC_POKEBALL.get(), b -> LootTable.lootTable().withPool(
+                                LootPool.lootPool()
+                                                .setRolls(ConstantValue.exactly(1))
+                                                .add(LootItem.lootTableItem(Items.DIAMOND).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
+                                                .add(LootItem.lootTableItem(Items.EMERALD).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
+                                                .add(LootItem.lootTableItem(Items.GOLD_INGOT).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3))))
+                ));
 
         }
 

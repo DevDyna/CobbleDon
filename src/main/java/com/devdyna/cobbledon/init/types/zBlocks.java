@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import com.devdyna.cobbledon.Main;
 import com.devdyna.cobbledon.init.Material;
+import com.devdyna.cobbledon.init.builder.PokeLootBall;
 @SuppressWarnings("null")
 public class zBlocks {
         
@@ -27,8 +28,10 @@ public class zBlocks {
 
         // ---------------------------------------------------------------------------------------//
 
-        public static final DeferredHolder<Block,?> pokeball = Material.registerItemBlock("poke", () -> new Block(Properties.of()));
+        public static final DeferredHolder<Block,?> CLASSIC_POKEBALL = Material.registerItemBlock("poke", () -> new PokeLootBall(Properties.of()));
 
+
+        
         public static void registerLists() {
 
                 // List.of(...).forEach(p -> ??);
