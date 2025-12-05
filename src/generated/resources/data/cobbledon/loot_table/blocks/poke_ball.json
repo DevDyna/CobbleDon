@@ -6,48 +6,123 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "cobblemon:adamant_mint"
+          "name": "cobblemon:poke_ball"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:emerald"
+          "name": "cobblemon:citrine_ball"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:gold_ingot"
+          "name": "cobblemon:verdant_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:azure_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:roseate_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:slate_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:premier_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:cherish_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:safari_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:fast_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:level_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:lure_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:heavy_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:love_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:friend_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:moon_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:park_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:net_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:dive_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:nest_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:repeat_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:timer_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:luxury_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:dusk_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:heal_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:quick_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:dream_ball"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:exp_candy_xs"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:exp_candy_s"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:relic_coin"
         }
       ],
       "rolls": 1.0
